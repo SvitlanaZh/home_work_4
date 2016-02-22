@@ -3,13 +3,12 @@
 }
 
 body {
+
+  background-image: url('../img/background.jpg');
   width: 100%;
-  background: rgba(18,137,167,1);
-  background: -moz-linear-gradient(top, rgba(18,137,167,1) 0%, rgba(18,137,167,1) 4%, rgba(94,239,255,1) 4%, rgba(94,239,255,1) 4.5%, rgba(23,206,226,1) 4.5%, rgba(255,255,255,1) 16%, rgba(19,204,225,1) 16%, rgba(12,115,159,1) 100%);
-  background: -webkit-linear-gradient(top, rgba(18,137,167,1) 0%, rgba(18,137,167,1) 4%, rgba(94,239,255,1) 4%, rgba(94,239,255,1) 4.5%, rgba(23,206,226,1) 4.5%, rgba(255,255,255,1) 16%, rgba(19,204,225,1) 16%, rgba(12,115,159,1) 100%);
-  background: -o-linear-gradient(top, rgba(18,137,167,1) 0%, rgba(18,137,167,1) 4%, rgba(94,239,255,1) 4%, rgba(94,239,255,1) 4.5%, rgba(23,206,226,1) 4.5%, rgba(255,255,255,1) 16%, rgba(19,204,225,1) 16%, rgba(12,115,159,1) 100%);
-  background: linear-gradient(to bottom, rgba(18,137,167,1) 0%, rgba(18,137,167,1) 4%, rgba(94,239,255,1) 4%, rgba(94,239,255,1) 4.5%, rgba(23,206,226,1) 4.5%, rgba(255,255,255,1) 16%, rgba(19,204,225,1) 16%, rgba(12,115,159,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1289a7', endColorstr='#0c739f', GradientType=0 );
+  background-repeat: repeat-x;
+
+  background-color: #0c739f;
 }
 
 .wrapper {
@@ -30,7 +29,7 @@ body {
 
 /*start of header with logo and comtacts*/
 .header {
-  padding:10px 20px 5px 20px;
+  padding:7px 20px 5px 20px;
   height:160px;
   position:relative;
 }
@@ -75,58 +74,65 @@ body {
 
 
 /*start of horizontal menu */
-.menu{
-  width:1000px;
+.menu {
   position: absolute;
-  z-index:3;
-  padding:10px 0 10px 0px;
-  margin-top:-2px;
+  margin-top: -3px;
+  padding: 0 0 0 65px;
+  width: 935px;
   background-color: #343434;
-  border-bottom: 1px solid black;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 5px 10px 0px rgba(50, 50, 50, 0.75);
   box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+  border-bottom: 1px solid black;
+  z-index: 4;
 }
 
-.menu ul li{
-   margin-left:20px;
-   margin-right:50px;
-   float:left;
-   position:relative;
-   height:20px;
-   cursor:pointer;
+.menu li {
+  float: left;
+  position: relative;
 }
 
-.menu ul li a {
-   text-decoration: none;
-   color: white;
-   font-size: 14px;
+.menu li a {
+  padding: 7px 55px 10px 0;
+  display: block;
+  color: white;
+  text-decoration: none;
 }
 
-.menu ul li ul { /*drop-down menu*/
-   display: none;
-   position:absolute;
-   left:0px;
-   top:29px;
-   width:152px;
-   background-color:#343434;
-   -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
-   -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
-   box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
-   z-index:1;
+.submenu {
+  display: none;
+  position: absolute;
+  left:0px;
+  top:34px;
+  width:152px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  background-color:  #343434;
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+  z-index:2;
 }
 
-.menu ul li ul li {/*drop-down menu*/
-   display: block;
-   margin-top:10px ;
-   margin-left: 10px;
-   margin-bottom:10px;
+.submenu li {
+  display: block;
 }
 
-.menu ul li:hover ul{/*drop-down menu*/
-   display: block;
-   background-color: #343434;
+.submenu li a{
+  display: block;
+  padding: 0 45px 0 15px;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
 }
+.menu li a:hover {
+  color:#4cbae1;
+}
+.menu li:hover .submenu   {
+  display: block;
+}
+
+
+
 /*end of horizontal menu*/
 
 
@@ -188,7 +194,7 @@ body {
 }
 
 .sidebar h1,.news h1,.content h1 {
-   margin-top:50px;
+   margin-top:10px;
    text-align: center;
    font-weight: bold;
    color: #424c43;
