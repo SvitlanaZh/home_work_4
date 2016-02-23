@@ -4,11 +4,8 @@
 
 body {
 
-  background-image: url('../img/background.jpg');
+  background: url('../img/background.png') repeat-x #0c739f;
   width: 100%;
-  background-repeat: repeat-x;
-
-  background-color: #0c739f;
 }
 
 .wrapper {
